@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var vm: MemoryGameViewModel
+    @EnvironmentObject var vm: MemoryGameVM
     
     var body: some View {
         ScrollView {
@@ -18,7 +18,6 @@ struct HomeView: View {
                         .onTapGesture {
                             vm.choose(card)
                         }
-                        .aspectRatio(2/3, contentMode: .fit)
                 }
             }
         }
@@ -38,6 +37,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .environmentObject(MemoryGameViewModel())
+            .environmentObject(MemoryGameVM())
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     let card: MemoryGame<String>.Card
-    let shape = RoundedRectangle(cornerRadius: 15)
+    let shape = Circle()
     
     var body: some View {
         ZStack {
@@ -30,6 +30,7 @@ struct CardView: View {
                     .foregroundColor(.indigo)
             }
         }
+        .scaledToFit()
     }
 }
 
@@ -55,7 +56,6 @@ struct CardView_Previews: PreviewProvider {
                 .previewDisplayName("isFaceUp = false")
                 .previewLayout(.sizeThatFits)
         }
-        .aspectRatio(2/3, contentMode: .fit)
         .frame(width: 100)
         .padding()
     }

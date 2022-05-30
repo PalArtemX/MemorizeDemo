@@ -12,9 +12,10 @@
 		F8FB1FA62844E6C300650FBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8FB1FA52844E6C300650FBD /* Preview Assets.xcassets */; };
 		F8FB1FB02844E6FA00650FBD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FAF2844E6FA00650FBD /* HomeView.swift */; };
 		F8FB1FB22844E73500650FBD /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB12844E73500650FBD /* MemoryGame.swift */; };
-		F8FB1FB42844E96000650FBD /* MemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB32844E96000650FBD /* MemoryGameViewModel.swift */; };
+		F8FB1FB42844E96000650FBD /* MemoryGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB32844E96000650FBD /* MemoryGameVM.swift */; };
 		F8FB1FB62844E9D300650FBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB52844E9D300650FBD /* CardView.swift */; };
 		F8FB1FB82844EA1700650FBD /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB72844EA1700650FBD /* Preview.swift */; };
+		F8FB1FC4284558BB00650FBD /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FC3284558BB00650FBD /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +25,10 @@
 		F8FB1FA52844E6C300650FBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8FB1FAF2844E6FA00650FBD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F8FB1FB12844E73500650FBD /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
-		F8FB1FB32844E96000650FBD /* MemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameViewModel.swift; sourceTree = "<group>"; };
+		F8FB1FB32844E96000650FBD /* MemoryGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameVM.swift; sourceTree = "<group>"; };
 		F8FB1FB52844E9D300650FBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F8FB1FB72844EA1700650FBD /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		F8FB1FC3284558BB00650FBD /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F8FB1FAE2844E6EA00650FBD /* Views */,
 				F8FB1FAD2844E6E200650FBD /* ViewModels */,
 				F8FB1FAC2844E6DB00650FBD /* Models */,
+				F8FB1FC22845587E00650FBD /* Extensions */,
 				F8FB1FA22844E6C300650FBD /* Assets.xcassets */,
 				F8FB1FA42844E6C300650FBD /* Preview Content */,
 			);
@@ -89,7 +92,7 @@
 		F8FB1FAD2844E6E200650FBD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F8FB1FB32844E96000650FBD /* MemoryGameViewModel.swift */,
+				F8FB1FB32844E96000650FBD /* MemoryGameVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -101,6 +104,14 @@
 				F8FB1FB52844E9D300650FBD /* CardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F8FB1FC22845587E00650FBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8FB1FC3284558BB00650FBD /* ArrayExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +187,8 @@
 				F8FB1FB22844E73500650FBD /* MemoryGame.swift in Sources */,
 				F8FB1FB02844E6FA00650FBD /* HomeView.swift in Sources */,
 				F8FB1F9F2844E6C200650FBD /* MemorizeDemoApp.swift in Sources */,
-				F8FB1FB42844E96000650FBD /* MemoryGameViewModel.swift in Sources */,
+				F8FB1FB42844E96000650FBD /* MemoryGameVM.swift in Sources */,
+				F8FB1FC4284558BB00650FBD /* ArrayExtension.swift in Sources */,
 				F8FB1FB82844EA1700650FBD /* Preview.swift in Sources */,
 				F8FB1FB62844E9D300650FBD /* CardView.swift in Sources */,
 			);
