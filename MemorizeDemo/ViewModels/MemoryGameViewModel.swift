@@ -21,7 +21,6 @@ class MemoryGameViewModel: ObservableObject {
     
     
     // MARK: - Functions
-    
     func choose(_ card: MemoryGame<String>.Card) {
         memoryGame.choose(card)
     }

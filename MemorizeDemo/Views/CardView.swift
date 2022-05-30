@@ -42,10 +42,13 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CardView(card: Preview.card(isFaceUp: true))
+                .previewDisplayName("isFaceUp = true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: true, content: "⚽️"))
+                .previewDisplayName("isFaceUp = true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: false))
+                .previewDisplayName("isFaceUp = false")
                 .previewLayout(.sizeThatFits)
         }
         .aspectRatio(2/3, contentMode: .fit)
