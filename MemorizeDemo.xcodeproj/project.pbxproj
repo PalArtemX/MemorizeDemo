@@ -13,6 +13,8 @@
 		F8FB1FB02844E6FA00650FBD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FAF2844E6FA00650FBD /* HomeView.swift */; };
 		F8FB1FB22844E73500650FBD /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB12844E73500650FBD /* MemoryGame.swift */; };
 		F8FB1FB42844E96000650FBD /* MemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB32844E96000650FBD /* MemoryGameViewModel.swift */; };
+		F8FB1FB62844E9D300650FBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB52844E9D300650FBD /* CardView.swift */; };
+		F8FB1FB82844EA1700650FBD /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB72844EA1700650FBD /* Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		F8FB1FAF2844E6FA00650FBD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F8FB1FB12844E73500650FBD /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		F8FB1FB32844E96000650FBD /* MemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameViewModel.swift; sourceTree = "<group>"; };
+		F8FB1FB52844E9D300650FBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F8FB1FB72844EA1700650FBD /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FB1FA52844E6C300650FBD /* Preview Assets.xcassets */,
+				F8FB1FB72844EA1700650FBD /* Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FB1FAF2844E6FA00650FBD /* HomeView.swift */,
+				F8FB1FB52844E9D300650FBD /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 				F8FB1FB02844E6FA00650FBD /* HomeView.swift in Sources */,
 				F8FB1F9F2844E6C200650FBD /* MemorizeDemoApp.swift in Sources */,
 				F8FB1FB42844E96000650FBD /* MemoryGameViewModel.swift in Sources */,
+				F8FB1FB82844EA1700650FBD /* Preview.swift in Sources */,
+				F8FB1FB62844E9D300650FBD /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

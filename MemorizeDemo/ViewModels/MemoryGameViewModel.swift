@@ -9,5 +9,13 @@ import Foundation
 
 
 class MemoryGameViewModel: ObservableObject {
+    static let emojis = ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓"]
     
+    static func createMemoryGame() -> MemoryGame<String> {
+        MemoryGame<String>(numbersOfPairsOfCards: 3) { pairIndex in
+            emojis[pairIndex]
+        }
+    }
+    
+    @Published private(set) var memoryGame = createMemoryGame()
 }

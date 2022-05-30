@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var vm: MemoryGameViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
+                
+            }
+        }
     }
 }
 
@@ -25,5 +31,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(MemoryGameViewModel())
     }
 }
