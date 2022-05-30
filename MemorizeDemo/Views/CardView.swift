@@ -18,9 +18,13 @@ struct CardView: View {
                     .fill()
                     .foregroundColor(.white)
                 shape
-                    .strokeBorder(lineWidth: 3, antialiased: true)
+                    .strokeBorder(lineWidth: 2, antialiased: true)
+                    .foregroundColor(.indigo)
                 Text(card.content)
                     .font(.largeTitle)
+            } else if card.isMatched {
+                shape
+                    .opacity(0)
             } else {
                 shape
                     .foregroundColor(.indigo)
