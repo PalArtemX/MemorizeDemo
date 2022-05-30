@@ -43,6 +43,8 @@ struct CardView_Previews: PreviewProvider {
         Group {
             CardView(card: Preview.card(isFaceUp: true))
                 .previewLayout(.sizeThatFits)
+            CardView(card: Preview.card(isFaceUp: true, content: "⚽️"))
+                .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: false))
                 .previewLayout(.sizeThatFits)
         }

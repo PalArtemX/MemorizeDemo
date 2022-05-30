@@ -9,7 +9,6 @@ import Foundation
 
 
 struct MemoryGame<CardContent> {
-    
     struct Card: Identifiable {
         var id = UUID()
         var isMatched = false
@@ -19,7 +18,7 @@ struct MemoryGame<CardContent> {
     
     private(set) var cards: [Card]
     
-    
+    // MARK: - init
     init(numbersOfPairsOfCards: Int, cardContent: (Int) -> CardContent) {
         cards = []
         for pairIndex in 0..<numbersOfPairsOfCards {
@@ -28,7 +27,7 @@ struct MemoryGame<CardContent> {
         }
     }
     
-    
+    // MARK: - Functions
     func choose(_ card: Card) {
         
     }

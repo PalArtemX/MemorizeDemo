@@ -9,8 +9,8 @@ import Foundation
 
 
 struct Preview {
-    static func card(isFaceUp: Bool) -> MemoryGame<String>.Card {
-        MemoryGame<String>.Card(isFaceUp: isFaceUp, content: "😀")
+    static func card(isFaceUp: Bool, content: String = "😀") -> MemoryGame<String>.Card {
+        MemoryGame<String>.Card(isFaceUp: isFaceUp, content: content)
     }
 }
 
