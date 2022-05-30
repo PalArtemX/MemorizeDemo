@@ -9,24 +9,22 @@ import SwiftUI
 
 struct CardView: View {
     let card: MemoryGame<String>.Card
-    let cornerRadius: Double = 25
+    let shape = RoundedRectangle(cornerRadius: 15)
     
     var body: some View {
         ZStack {
             if card.isFaceUp {
-                RoundedRectangle(cornerRadius: cornerRadius)
+                shape
                     .fill()
                     .foregroundColor(.white)
-                RoundedRectangle(cornerRadius: cornerRadius)
+                shape
                     .strokeBorder(lineWidth: 3, antialiased: true)
                 Text(card.content)
                     .font(.largeTitle)
             } else {
-                RoundedRectangle(cornerRadius: cornerRadius)
+                shape
                     .foregroundColor(.indigo)
             }
-            
-           
         }
     }
 }
@@ -41,8 +39,6 @@ struct CardView: View {
 
 
 struct CardView_Previews: PreviewProvider {
-    
-    
     static var previews: some View {
         Group {
             CardView(card: Preview.card(isFaceUp: true))

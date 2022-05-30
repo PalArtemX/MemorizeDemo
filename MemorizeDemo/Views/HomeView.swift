@@ -13,9 +13,16 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
-                
+                ForEach(vm.memoryGame.cards) { card in
+                    CardView(card: card)
+                        .onTapGesture {
+                            vm.choose(card)
+                        }
+                        .aspectRatio(2/3, contentMode: .fit)
+                }
             }
         }
+        .padding()
     }
 }
 
