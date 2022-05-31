@@ -11,18 +11,20 @@ struct HomeView: View {
     @EnvironmentObject var vm: MemoryGameVM
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
-                ForEach(vm.memoryGame.cards) { card in
-                    CardView(card: card)
-                        .onTapGesture {
-                            withAnimation(.default) {
-                                vm.choose(card)
-                            }
-                            
-                        }
+        VStack {
+            CardsStackView()
+            
+            Button {
+                withAnimation(.easeInOut) {
+                    vm.shuffle()
                 }
+            } label: {
+                Label("Shuffle", systemImage: "shuffle.circle")
+                    .symbolRenderingMode(.hierarchical)
+                    .font(.headline)
             }
+            .buttonStyle(.bordered)
+
         }
         .padding()
     }

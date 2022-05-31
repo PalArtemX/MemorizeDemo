@@ -34,6 +34,7 @@ struct MemoryGame<CardContent: Equatable> {
             cards.append(Card(content: cardContent(pairIndex)))
             cards.append(Card(content: cardContent(pairIndex)))
         }
+        shuffle()
     }
     
     // MARK: - Functions
@@ -50,9 +51,11 @@ struct MemoryGame<CardContent: Equatable> {
                 
                 indexOneAndOnlyFaceUpCard = chosenIndex
             }
-            
-            
         }
+    }
+    
+    mutating func shuffle() {
+        cards.shuffle()
     }
     
     

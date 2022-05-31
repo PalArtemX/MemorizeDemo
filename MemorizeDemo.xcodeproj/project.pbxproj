@@ -17,6 +17,7 @@
 		F8FB1FB82844EA1700650FBD /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FB72844EA1700650FBD /* Preview.swift */; };
 		F8FB1FC4284558BB00650FBD /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FC3284558BB00650FBD /* ArrayExtension.swift */; };
 		F8FB1FC62846295B00650FBD /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FC52846295B00650FBD /* Pie.swift */; };
+		F8FB1FC9284643C000650FBD /* CardsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB1FC8284643C000650FBD /* CardsStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F8FB1FB72844EA1700650FBD /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		F8FB1FC3284558BB00650FBD /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		F8FB1FC52846295B00650FBD /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		F8FB1FC8284643C000650FBD /* CardsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FB1FAF2844E6FA00650FBD /* HomeView.swift */,
+				F8FB1FC8284643C000650FBD /* CardsStackView.swift */,
 				F8FB1FB52844E9D300650FBD /* CardView.swift */,
 				F8FB1FC72846296000650FBD /* Shapes */,
 			);
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FB1FB22844E73500650FBD /* MemoryGame.swift in Sources */,
+				F8FB1FC9284643C000650FBD /* CardsStackView.swift in Sources */,
 				F8FB1FB02844E6FA00650FBD /* HomeView.swift in Sources */,
 				F8FB1FC62846295B00650FBD /* Pie.swift in Sources */,
 				F8FB1F9F2844E6C200650FBD /* MemorizeDemoApp.swift in Sources */,

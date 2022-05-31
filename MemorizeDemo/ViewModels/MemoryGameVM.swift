@@ -24,4 +24,8 @@ class MemoryGameVM: ObservableObject {
     func choose(_ card: MemoryGame<String>.Card) {
         memoryGame.choose(card)
     }
+    
+    func shuffle() {
+        memoryGame.shuffle()
+    }
 }
