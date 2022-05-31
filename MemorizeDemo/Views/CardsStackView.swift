@@ -12,19 +12,17 @@ struct CardsStackView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
                 ForEach(vm.memoryGame.cards) { card in
                     CardView(card: card)
                         .onTapGesture {
                             withAnimation(.default) {
                                 vm.choose(card)
                             }
-                            
                         }
                 }
             }
         }
-        .padding()
     }
 }
 

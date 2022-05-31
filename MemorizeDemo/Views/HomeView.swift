@@ -13,20 +13,21 @@ struct HomeView: View {
     var body: some View {
         VStack {
             CardsStackView()
+                .padding()
             
             Button {
                 withAnimation(.easeInOut) {
                     vm.shuffle()
                 }
             } label: {
-                Label("Shuffle", systemImage: "shuffle.circle")
+                Label("Shuffle", systemImage: "circle.grid.cross.right.filled")
                     .symbolRenderingMode(.hierarchical)
-                    .font(.headline)
+                    .font(.title3)
+                    .foregroundColor(.orange)
             }
             .buttonStyle(.bordered)
 
         }
-        .padding()
     }
 }
 

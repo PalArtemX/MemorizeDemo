@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     let card: MemoryGame<String>.Card
     let shape = Circle()
+    @EnvironmentObject var vm: MemoryGameVM
     
     var body: some View {
         GeometryReader { geometry in
@@ -25,9 +26,11 @@ struct CardView: View {
                         .frame(height: geometry.size.height * 0.80)
                         .foregroundColor(.indigo)
                         .opacity(0.2)
+                    
                 } else if card.isMatched {
                     shape
                         .opacity(0)
+                    
                 } else {
                     shape
                         .foregroundColor(.indigo)
@@ -39,6 +42,7 @@ struct CardView: View {
                     .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.6))
                     .opacity(card.isFaceUp ? 1 : 0)
             }
+            .rotation3DEffect(Angle(degrees: card.isFaceUp ? 0 : 180), axis: (x: 0, y: 1, z: 0))
         }
         .scaledToFit()
     }
@@ -57,13 +61,16 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CardView(card: Preview.card(isFaceUp: true))
+                .environmentObject(MemoryGameVM())
                 .preferredColorScheme(.dark)
                 .previewDisplayName("isFaceUp == true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: true, content: "⚽️"))
+                .environmentObject(MemoryGameVM())
                 .previewDisplayName("isFaceUp == true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: false))
+                .environmentObject(MemoryGameVM())
                 .previewDisplayName("isFaceUp == false")
                 .previewLayout(.sizeThatFits)
         }
