@@ -21,9 +21,10 @@ struct CardView: View {
                     shape
                         .strokeBorder(lineWidth: 2, antialiased: true)
                         .foregroundColor(.indigo)
-                    Text(card.content)
-                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.7))
-                        
+                    Pie(startAngle: Angle(degrees: 0 - 90), endAngle: Angle(degrees: 110 - 90))
+                        .frame(height: geometry.size.height * 0.80)
+                        .foregroundColor(.indigo)
+                        .opacity(0.2)
                 } else if card.isMatched {
                     shape
                         .opacity(0)
@@ -31,6 +32,12 @@ struct CardView: View {
                     shape
                         .foregroundColor(.indigo)
                 }
+                
+                Text(card.content)
+                    .rotationEffect(Angle(degrees: card.isMatched ? 360 : 0))
+                    .animation(Animation.spring(response: 2, dampingFraction: 0.1, blendDuration: 1), value: card.isMatched)
+                    .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.6))
+                    .opacity(card.isFaceUp ? 1 : 0)
             }
         }
         .scaledToFit()
@@ -51,13 +58,13 @@ struct CardView_Previews: PreviewProvider {
         Group {
             CardView(card: Preview.card(isFaceUp: true))
                 .preferredColorScheme(.dark)
-                .previewDisplayName("isFaceUp = true")
+                .previewDisplayName("isFaceUp == true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: true, content: "⚽️"))
-                .previewDisplayName("isFaceUp = true")
+                .previewDisplayName("isFaceUp == true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: false))
-                .previewDisplayName("isFaceUp = false")
+                .previewDisplayName("isFaceUp == false")
                 .previewLayout(.sizeThatFits)
         }
         .frame(width: 100, height: 100)

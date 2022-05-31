@@ -12,7 +12,7 @@ struct MemoryGame<CardContent: Equatable> {
     struct Card: Identifiable {
         let id = UUID()
         var isMatched = false
-        var isFaceUp = true
+        var isFaceUp = false
         let content: CardContent
     }
     

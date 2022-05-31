@@ -16,7 +16,10 @@ struct HomeView: View {
                 ForEach(vm.memoryGame.cards) { card in
                     CardView(card: card)
                         .onTapGesture {
-                            vm.choose(card)
+                            withAnimation(.default) {
+                                vm.choose(card)
+                            }
+                            
                         }
                 }
             }
