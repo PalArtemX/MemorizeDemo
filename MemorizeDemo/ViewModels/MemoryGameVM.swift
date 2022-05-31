@@ -19,7 +19,6 @@ class MemoryGameVM: ObservableObject {
     
     @Published private(set) var memoryGame = createMemoryGame()
     
-    
     // MARK: - Functions
     func choose(_ card: MemoryGame<String>.Card) {
         memoryGame.choose(card)

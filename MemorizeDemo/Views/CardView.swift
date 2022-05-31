@@ -61,16 +61,13 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CardView(card: Preview.card(isFaceUp: true))
-                .environmentObject(MemoryGameVM())
                 .preferredColorScheme(.dark)
                 .previewDisplayName("isFaceUp == true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: true, content: "⚽️"))
-                .environmentObject(MemoryGameVM())
                 .previewDisplayName("isFaceUp == true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: false))
-                .environmentObject(MemoryGameVM())
                 .previewDisplayName("isFaceUp == false")
                 .previewLayout(.sizeThatFits)
         }
