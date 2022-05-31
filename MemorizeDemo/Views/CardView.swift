@@ -12,22 +12,25 @@ struct CardView: View {
     let shape = Circle()
     
     var body: some View {
-        ZStack {
-            if card.isFaceUp {
-                shape
-                    .fill()
-                    .foregroundColor(.white)
-                shape
-                    .strokeBorder(lineWidth: 2, antialiased: true)
-                    .foregroundColor(.indigo)
-                Text(card.content)
-                    .font(.largeTitle)
-            } else if card.isMatched {
-                shape
-                    .opacity(0)
-            } else {
-                shape
-                    .foregroundColor(.indigo)
+        GeometryReader { geometry in
+            ZStack {
+                if card.isFaceUp {
+                    shape
+                        .fill()
+                        .foregroundColor(.white)
+                    shape
+                        .strokeBorder(lineWidth: 2, antialiased: true)
+                        .foregroundColor(.indigo)
+                    Text(card.content)
+                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.7))
+                        
+                } else if card.isMatched {
+                    shape
+                        .opacity(0)
+                } else {
+                    shape
+                        .foregroundColor(.indigo)
+                }
             }
         }
         .scaledToFit()
@@ -47,6 +50,7 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CardView(card: Preview.card(isFaceUp: true))
+                .preferredColorScheme(.dark)
                 .previewDisplayName("isFaceUp = true")
                 .previewLayout(.sizeThatFits)
             CardView(card: Preview.card(isFaceUp: true, content: "⚽️"))
@@ -56,7 +60,7 @@ struct CardView_Previews: PreviewProvider {
                 .previewDisplayName("isFaceUp = false")
                 .previewLayout(.sizeThatFits)
         }
-        .frame(width: 100)
+        .frame(width: 100, height: 100)
         .padding()
     }
 }
