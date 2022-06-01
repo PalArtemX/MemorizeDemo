@@ -34,14 +34,14 @@ struct CardView: View {
                         }
                         .frame(height: geometry.size.height * 0.80)
                         .foregroundColor(.indigo)
-                        .opacity(0.2)
+                        .opacity(0.3)
                     } else {
                         Pie(
                             startAngle: Angle(degrees: 0 - 90),
                             endAngle: Angle(degrees: (1 - card.bonusRemaining) * 360 - 90))
                         .frame(height: geometry.size.height * 0.80)
                         .foregroundColor(.indigo)
-                        .opacity(0.2)
+                        .opacity(0.3)
                     }
                     
                 } else if card.isMatched {
