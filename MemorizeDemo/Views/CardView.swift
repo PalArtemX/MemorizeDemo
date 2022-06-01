@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     let card: MemoryGame<String>.Card
     let shape = Circle()
+    @State private var animatedBonusRemaining: Double = 0
     
     var body: some View {
         GeometryReader { geometry in
@@ -21,10 +22,27 @@ struct CardView: View {
                     shape
                         .strokeBorder(lineWidth: 2, antialiased: true)
                         .foregroundColor(.indigo)
-                    Pie(startAngle: Angle(degrees: 0 - 90), endAngle: Angle(degrees: 110 - 90))
+                    if card.isConsumingBonusTime {
+                        Pie(
+                            startAngle: Angle(degrees: 0 - 90),
+                            endAngle: Angle(degrees: (1 - animatedBonusRemaining) * 360 - 90))
+                        .onAppear {
+                            animatedBonusRemaining = card.bonusRemaining
+                            withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+                                animatedBonusRemaining = 0
+                            }
+                        }
                         .frame(height: geometry.size.height * 0.80)
                         .foregroundColor(.indigo)
                         .opacity(0.2)
+                    } else {
+                        Pie(
+                            startAngle: Angle(degrees: 0 - 90),
+                            endAngle: Angle(degrees: (1 - card.bonusRemaining) * 360 - 90))
+                        .frame(height: geometry.size.height * 0.80)
+                        .foregroundColor(.indigo)
+                        .opacity(0.2)
+                    }
                     
                 } else if card.isMatched {
                     shape
