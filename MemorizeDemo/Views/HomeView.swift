@@ -15,18 +15,7 @@ struct HomeView: View {
             CardsStackView()
                 .padding()
             
-            Button {
-                withAnimation(.easeInOut) {
-                    vm.shuffle()
-                }
-            } label: {
-                Label("Shuffle", systemImage: "circle.grid.cross.right.filled")
-                    .symbolRenderingMode(.hierarchical)
-                    .font(.title3)
-                    .foregroundColor(.orange)
-            }
-            .buttonStyle(.bordered)
-
+            ButtonsView()
         }
     }
 }

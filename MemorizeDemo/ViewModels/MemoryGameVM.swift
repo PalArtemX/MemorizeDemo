@@ -27,4 +27,8 @@ class MemoryGameVM: ObservableObject {
     func shuffle() {
         memoryGame.shuffle()
     }
+    
+    func restart() {
+        
+    }
 }
