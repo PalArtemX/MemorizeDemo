@@ -10,7 +10,6 @@ import SwiftUI
 struct CardView: View {
     let card: MemoryGame<String>.Card
     let shape = Circle()
-    @EnvironmentObject var vm: MemoryGameVM
     
     var body: some View {
         GeometryReader { geometry in

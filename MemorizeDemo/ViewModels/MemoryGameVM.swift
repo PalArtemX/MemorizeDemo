@@ -29,6 +29,6 @@ class MemoryGameVM: ObservableObject {
     }
     
     func restart() {
-        
+        memoryGame = MemoryGameVM.createMemoryGame()
     }
 }

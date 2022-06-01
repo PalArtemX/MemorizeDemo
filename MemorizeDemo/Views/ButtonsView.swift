@@ -31,7 +31,7 @@ struct ButtonsView: View {
                     vm.restart()
                 }
             } label: {
-                Label("Restart", systemImage: "circle.grid.cross.right.filled")
+                Label("Restart", systemImage: "restart.circle")
                     .symbolRenderingMode(.hierarchical)
                     .font(.title3)
                     .foregroundColor(.red)
